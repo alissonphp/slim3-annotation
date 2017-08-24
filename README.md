@@ -9,7 +9,7 @@ Via [Composer](https://getcomposer.org/)
 composer require dilsonjlrjr/slim3-annotation
 ```
 
-##Initialization
+## Initialization
 
 In file public/index.php add:
 
@@ -24,9 +24,9 @@ The attribute **$app** is an instance of _\Slim\App_.
 
 The attribute **$pathController** is the location of the Controllers in the application.
 
-##Annotations Route
+## Annotations Route
 
-###Defining Controller - Example
+### Defining Controller - Example
 ```
 /**
  * @Route("/prefix")
@@ -44,8 +44,8 @@ class ClassController
 
 In creating a controller you can define grouping of routes, verbs, routes, aliases and middlewares.
 
-###Routes
-####Get - Example
+### Routes
+#### Get - Example
 ```
 /**
  * @Get(name="/rota2", alias="rote.id")
@@ -54,7 +54,7 @@ public function method() {
 }
 ```
 
-####Post - Example
+#### Post - Example
 ```
 /**
  * @Post(name="/rota2/{id}", alias="rote.id")
@@ -63,7 +63,7 @@ public function method() {
 }
 ```
 
-####Put - Example
+#### Put - Example
 ```
 /**
  * @Put(name="/rota2/{id}", alias="rote.id")
@@ -72,7 +72,7 @@ public function method() {
 }
 ```
 
-####Delete - Example
+#### Delete - Example
 ```
 /**
  * @Put(name="/rota2/{id}", alias="rote.id")
@@ -87,7 +87,7 @@ The alias use is optional.
 Regular expression can be used in the formation of routes. All route control 
 can be seen in the Slim framework documentation. [Router Slim](http://www.slimframework.com/docs/objects/router.html)
 
-####Route Groups
+#### Route Groups
 ```
 /**
  * @Route("/prefix")
@@ -110,7 +110,7 @@ In the example above the route will be created as below:
 http://localhost/prefix/rota2/1
 ```
 
-####Middleware
+#### Middleware
 ```
 /*
  * @Get(name="/rota2", alias="rote.id", middleware={"Test\Middleware\ExampleMiddleware"})
